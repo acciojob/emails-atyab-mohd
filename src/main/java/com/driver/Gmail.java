@@ -57,7 +57,7 @@ public class Gmail extends Email {
         // If the inbox is empty, return null
         // Else, return the message of the latest mail present in the inbox
         if(inbox.isEmpty()) return null;
-        return inbox.peekFirst().message;
+        return inbox.peekLast().message;
 
     }
 
@@ -65,7 +65,7 @@ public class Gmail extends Email {
         // If the inbox is empty, return null
         // Else, return the message of the oldest mail present in the inbox
         if(inbox.isEmpty()) return null;
-        return inbox.peekLast().message;
+        return inbox.peekFirst().message;
     }
 
     public int findMailsBetweenDates(Date start, Date end){
